@@ -1,5 +1,3 @@
-
-
 void loadDIMACS_CNF(String filename) {
 
     String[] lines;

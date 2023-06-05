@@ -1,4 +1,3 @@
-
 class bubbleText
 {
     String s;
@@ -33,4 +32,3 @@ class bubbleText
         text(s, x, y+0.75*pt);
     }
 }
-

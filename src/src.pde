@@ -1,16 +1,10 @@
-
 import processing.opengl.*;
-import fullscreen.*; 
 
 boolean render = true;
 float degOffset = 0.0;
 float circleRadius;
 int relaxValue;
 int heavyOrderNumber;
-
-/// Global variables
-
-FullScreen fs; 
 
 /// Color propertities
 color textFloatColor   = #00ff00; 
@@ -33,22 +27,17 @@ PShape s;
 /// Setup the program.
 ///
 void setup() {
-
-    size(screen.width, screen.height, OPENGL);
+    size(1280, 720, OPENGL);
 
     circleRadius = height/2;
 
     frameRate(100);
-    fs = new FullScreen(this);     // Create the fullscreen object
-    fs.enter();                    // enter fullscreen
 
     graphCount = 0;
     heavyOrderNumber = 10;
     currentFilename = "c-fat200-1.clq";
 
     loadDIMACS_CLQ(currentFilename);
-    //  loadDIMACS_CLQ("/Users/davidcarley/Dropbox/Personal/GRAD_SCHOOL/fall2011/clique/DIMACS_cliques/c-fat200-2.clq");
-    //    loadDIMACS_CLQ("/Users/davidcarley/Dropbox/Personal/GRAD_SCHOOL/fall2011/clique/DIMACS_cliques/c-fat200-5.clq");
 
     menuFont = createFont("Helvetica-29", 29);
     font = createFont("SansSerif", 18);
@@ -103,4 +92,3 @@ fill(textDefaultColor);
     text(currentFilename, 20, 40);
     text(heavyOrderNumber, 20, 75);
 }
-

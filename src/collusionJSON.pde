@@ -1,5 +1,4 @@
-import org.json.*;
-
+import java.util.Iterator;
 
 void selectAndLoadCollusion() {
 
@@ -21,31 +20,26 @@ void loadCollusion(String filename) {
 
     lines = loadStrings(filename);
 
-    try {
-        readJSON = new JSONObject(lines[0]);
-    } 
-    catch(JSONException e) {
-        println("JSON read exception");
-    }
+    readJSON = loadJSONObject(lines[0]);
 
-    Iterator it_1 = readJSON.keys();
+    Iterator it_1 = readJSON.keys().iterator();
     while (it_1.hasNext ()) {
         String key = (String) it_1.next();
 
         try {
             readJSON_2 = readJSON.getJSONObject(key);
         } 
-        catch(JSONException e) {
+        catch(Exception e) {
             println("JSON read exception");
         }
         try {
             readJSON_2 = readJSON_2.getJSONObject("referrers");
         } 
-        catch(JSONException e) {
+        catch(Exception e) {
             println("JSON read exception_2");
         }
 
-        Iterator it_2 = readJSON_2.keys();
+        Iterator it_2 = readJSON_2.keys().iterator();
         while (it_2.hasNext ()) {
             String key_2 = (String) it_2.next();
             addEdge(key, key_2);
@@ -56,4 +50,3 @@ void loadCollusion(String filename) {
     
     graphCount++;
 }
-

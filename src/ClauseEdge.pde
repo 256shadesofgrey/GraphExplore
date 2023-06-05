@@ -1,4 +1,3 @@
-
 class ClauseEdge extends Edge
 {
     ClauseNode from;
@@ -26,4 +25,3 @@ class ClauseEdge extends Edge
         line(from.x, from.y, to.x, to.y);
     }
 }
-

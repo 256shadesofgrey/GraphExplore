@@ -1,4 +1,3 @@
-
 Node findNode(String label) {
     label = label.toLowerCase();
     Node n = (Node) nodeTable.get(label);
@@ -133,4 +132,3 @@ class Node {
         }
     }
 }
-

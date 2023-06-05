@@ -1,4 +1,3 @@
-
 import java.util.HashMap;
 
 ///    Graph propertities
@@ -148,4 +147,3 @@ void placeLine() {
         }
     }
 }
-

@@ -1,5 +1,3 @@
-
-
 void selectAndLoadCLQ() {
 
     currentFilename = selectFile();
@@ -30,6 +28,3 @@ void loadDIMACS_CLQ(String filename) {
     graphCount++;
     placeNodesOnCircle();
 }
-
-
-

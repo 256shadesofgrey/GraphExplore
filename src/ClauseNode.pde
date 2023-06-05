@@ -1,5 +1,3 @@
-
-
 class ClauseNode extends Node {
 
     String v1;
@@ -24,4 +22,3 @@ class ClauseNode extends Node {
         textBox.render(int(x), int(y));
     }
 }
-

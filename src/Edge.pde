@@ -1,5 +1,3 @@
-
-
 void addEdge(String fromLabel, String toLabel) {
 
     Node from = findNode(fromLabel);
@@ -81,4 +79,3 @@ class Edge {
         line(from.x, from.y, to.x, to.y);
     }
 }
-
